@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-script: var(--font-sacramento);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  /* MeetMe Theme Colors */
+  --primary: #00CED1;
+  /* Cyan */
+  --primary-foreground: #ffffff;
+  --secondary: #FF5252;
+  /* Red/Coral */
+  --secondary-foreground: #ffffff;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  /* Font fallbacks are handled by next/font */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Keeping light mode structure mainly as per 'professional' landing page often implies clean white/light, 
+       but supporting dark mode if user's system prefers it could be good. 
+       However, the prompt reference implies a specific look. 
+       I will force light mode default structure for now to match the "clean" requirement usually associated with white backgrounds,
+       or better yet, just provide dark mode vars.
+    */
+    --background: #ffffff;
+    /* Forcing white theme as base for now to match strict design unless dark mode requested */
+    --foreground: #0f172a;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  antialiased: true;
 }
