@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, MapPin, Send, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import GoogleMap from "./GoogleMap";
 
 export default function Contact() {
     const [formState, setFormState] = useState("idle"); // idle, submitting, success
@@ -150,6 +151,11 @@ export default function Contact() {
                             </form>
                         )}
                     </motion.div>
+                </div>
+
+                {/* Google Map Section */}
+                <div className="mt-20">
+                    <GoogleMap />
                 </div>
             </div>
 
