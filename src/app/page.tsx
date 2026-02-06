@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Experience from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
 import LearningPath from "@/components/LearningPath";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -21,13 +22,7 @@ export default function Home() {
 
       <LearningPath />
 
-      {/* Contact Section Placeholder */}
-      <section id="contact" className="min-h-screen flex items-center justify-center bg-white">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Contacto</h2>
-          <p className="text-slate-600">Contact form will go here.</p>
-        </div>
-      </section>
+      <Contact />
 
     </main>
   );
