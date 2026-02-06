@@ -5,6 +5,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-script: var(--font-sacramento);
+  --font-shadows: var(--font-shadows);
+  --font-source: var(--font-source-sans);
 }
 
 :root {
