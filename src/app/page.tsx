@@ -5,6 +5,7 @@ import Experience from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
 import LearningPath from "@/components/LearningPath";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
       <LearningPath />
 
       <Contact />
+
+      <Footer />
 
     </main>
   );

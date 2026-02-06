@@ -159,15 +159,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            {/* Simple Footer */}
-            <div className="border-t border-slate-100 mt-24 pt-8 text-center">
-                <p className="text-slate-500 text-sm">
-                    © {new Date().getFullYear()} Luis Canedo. Todos los derechos reservados.
-                </p>
-                <div className="flex justify-center gap-6 mt-4">
-                    {/* Add social interaction here if needed */}
-                </div>
-            </div>
+
         </section>
     );
 }
