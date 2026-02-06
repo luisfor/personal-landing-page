@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -12,13 +13,7 @@ export default function Home() {
 
       <Services />
 
-      {/* Experience Section Placeholder */}
-      <section id="experience" className="min-h-screen flex items-center justify-center bg-white border-b border-slate-200">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Experiencia</h2>
-          <p className="text-slate-600">Timeline will go here.</p>
-        </div>
-      </section>
+      <Experience />
 
       {/* Portfolio Section Placeholder */}
       <section id="portfolio" className="min-h-screen flex items-center justify-center bg-slate-50 border-b border-slate-200">
