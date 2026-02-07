@@ -53,9 +53,9 @@ export default function About() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                             <a
-                                href="/cv/resume.pdf"
-                                download
-                                className="px-8 py-4 bg-[var(--primary)] text-white font-bold rounded-full hover:bg-[var(--primary)]/90 transition-all flex items-center justify-center gap-2 shadow-lg uppercase tracking-wide"
+                                href="/Luis_Canedo_CV.pdf"
+                                download="Luis_Canedo_CV.pdf"
+                                className="px-8 py-4 bg-[#00b4d9] text-white font-bold rounded-full hover:bg-[#009ac0] transition-all flex items-center justify-center gap-2 shadow-lg uppercase tracking-wide hover:-translate-y-1"
                             >
                                 <Download size={20} />
                                 Descargar Hoja de Vida
