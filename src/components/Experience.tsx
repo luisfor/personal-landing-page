@@ -10,9 +10,9 @@ const experienceData = [
         company: "Independiente / Proyectos Estratégicos",
         date: "06/2024 – Presente",
         description: [
-            "**Optimización Cloud:** Aplicando conocimientos avanzados en Administración de Azure (Certificación 2024) para el despliegue de recursos escalables y redes virtuales seguras.",
-            "**Resiliencia de Datos:** Diseño de planes de Disaster Recovery utilizando Veeam Backup & Replication para garantizar la protección de entornos virtuales.",
-            "**Auditoría de Bases de Datos:** Consultoría técnica basada en la especialización de Gestión y Seguridad de Bases de Datos para la optimización de servidores SQL."
+            "Optimización Cloud: Aplicando conocimientos avanzados en Administración de Azure (Certificación 2024) para el despliegue de recursos escalables y redes virtuales seguras.",
+            "Resiliencia de Datos: Diseño de planes de Disaster Recovery utilizando Veeam Backup & Replication para garantizar la protección de entornos virtuales.",
+            "Auditoría de Bases de Datos: Consultoría técnica basada en la especialización de Gestión y Seguridad de Bases de Datos para la optimización de servidores SQL."
         ]
     },
     {
@@ -20,10 +20,10 @@ const experienceData = [
         company: "Condor Labs / Propelus (Remoto para USA)",
         date: "02/2021 – 06/2024",
         description: [
-            "**Arquitectura Cloud e Híbrida:** Lideré la migración de infraestructura crítica y servicios de correo hacia AWS, gestionando máquinas virtuales y servicios en la nube para operaciones internacionales.",
-            "**Gestión de Infraestructura Crítica:** Administré servidores en entornos de virtualización avanzada con VMware (vCenter) y sistemas operativos Linux (Red Hat, CentOS, Oracle Linux) y Windows.",
-            "**Ciberseguridad y Acceso:** Implementé soluciones de Zero Trust y gestión de identidades mediante Okta, SSO, AppGate y seguridad perimetral con Fortigate.",
-            "**Operaciones IT y Soporte:** Gestioné el ciclo de vida de activos (MacBooks/Servidores) y sistemas de seguridad física (CCTV, AP, controles biométricos)."
+            "Arquitectura Cloud e Híbrida: Lideré la migración de infraestructura crítica y servicios de correo hacia AWS, gestionando máquinas virtuales y servicios en la nube para operaciones internacionales.",
+            "Gestión de Infraestructura Crítica: Administré servidores en entornos de virtualización avanzada con VMware (vCenter) y sistemas operativos Linux (Red Hat, CentOS, Oracle Linux) y Windows.",
+            "Ciberseguridad y Acceso: Implementé soluciones de Zero Trust y gestión de identidades mediante Okta, SSO, AppGate y seguridad perimetral con Fortigate.",
+            "Operaciones IT y Soporte: Gestioné el ciclo de vida de activos (MacBooks/Servidores) y sistemas de seguridad física (CCTV, AP, controles biométricos)."
         ]
     },
     {
@@ -31,9 +31,9 @@ const experienceData = [
         company: "Operadora Vial de Colombia",
         date: "05/2008 – 02/2021",
         description: [
-            "**Liderazgo Técnico:** Dirigí el departamento de IT, supervisando la administración de tecnologías y el soporte de tercer nivel para asegurar la continuidad operativa.",
-            "**Especialista en Datos:** Administré y aseguré ecosistemas de SQL Server, optimizando el rendimiento y la integridad de las bases de datos corporativas.",
-            "**Modernización Tecnológica:** Ejecuté proyectos de migración masiva de sistemas operativos y la implementación de nuevos entornos de virtualización con Hyper-V."
+            "Liderazgo Técnico: Dirigí el departamento de IT, supervisando la administración de tecnologías y el soporte de tercer nivel para asegurar la continuidad operativa.",
+            "Especialista en Datos: Administré y aseguré ecosistemas de SQL Server, optimizando el rendimiento y la integridad de las bases de datos corporativas.",
+            "Modernización Tecnológica: Ejecuté proyectos de migración masiva de sistemas operativos y la implementación de nuevos entornos de virtualización con Hyper-V."
         ]
     }
 ];

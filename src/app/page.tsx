@@ -6,6 +6,7 @@ import Portfolio from "@/components/Portfolio";
 import LearningPath from "@/components/LearningPath";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <Contact />
 
       <Footer />
+
+      <WhatsAppButton />
 
     </main>
   );
