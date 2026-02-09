@@ -106,11 +106,46 @@ export default function Contact() {
                                 </button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form
+                                name="contact"
+                                method="POST"
+                                data-netlify="true"
+                                data-netlify-honeypot="bot-field"
+                                onSubmit={async (e) => {
+                                    e.preventDefault();
+                                    setFormState("submitting");
+
+                                    const formData = new FormData(e.currentTarget);
+
+                                    try {
+                                        const response = await fetch("/", {
+                                            method: "POST",
+                                            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                                            body: new URLSearchParams(formData as any).toString()
+                                        });
+
+                                        if (response.ok) {
+                                            setFormState("success");
+                                        } else {
+                                            setFormState("error");
+                                            alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
+                                        }
+                                    } catch (error) {
+                                        setFormState("error");
+                                        alert("Error de conexión. Verifica tu internet.");
+                                    }
+                                }}
+                                className="space-y-6"
+                            >
+                                <input type="hidden" name="form-name" value="contact" />
+                                <p className="hidden">
+                                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                                </p>
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">Nombre Completo</label>
                                     <input
                                         type="text"
+                                        name="name"
                                         id="name"
                                         required
                                         className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#00b4d9] focus:ring-2 focus:ring-[#00b4d9]/20 outline-none transition-all"
@@ -121,6 +156,7 @@ export default function Contact() {
                                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">Email Corporativo</label>
                                     <input
                                         type="email"
+                                        name="email"
                                         id="email"
                                         required
                                         className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#00b4d9] focus:ring-2 focus:ring-[#00b4d9]/20 outline-none transition-all"
@@ -130,6 +166,7 @@ export default function Contact() {
                                 <div>
                                     <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">Mensaje</label>
                                     <textarea
+                                        name="message"
                                         id="message"
                                         rows={4}
                                         required
