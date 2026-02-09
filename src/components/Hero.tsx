@@ -9,8 +9,8 @@ export default function Hero() {
         <section id="hero" className="relative h-screen w-full flex items-center overflow-hidden bg-slate-900">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-[url('/images/hero-bg.png')] bg-cover bg-center opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-[url('/images/hero-bg.png')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 via-slate-900/20 to-transparent" />
             </div>
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
@@ -22,16 +22,16 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="flex flex-col items-start gap-4 pt-20 lg:pt-0 z-20"
                 >
-                    <motion.h2 className="text-4xl md:text-5xl lg:text-6xl font-script text-primary text-white/90 transform -rotate-2">
+                    <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-script text-primary text-white/90 transform -rotate-2 mb-2 shadow-black drop-shadow-md">
                         Hi, This Is
                     </motion.h2>
 
-                    <h1 className="text-6xl md:text-7xl lg:text-9xl font-black tracking-tight uppercase drop-shadow-2xl font-[family-name:var(--font-source)] text-white leading-[0.9]">
+                    <h1 className="text-6xl md:text-7xl lg:text-9xl font-black tracking-tight uppercase drop-shadow-xl font-[family-name:var(--font-source)] text-white leading-[0.9]">
                         Luis<br />Canedo
                     </h1>
 
-                    <div className="relative mt-2">
-                        <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 tracking-wide font-bold uppercase">
+                    <div className="relative mt-4">
+                        <p className="text-lg md:text-xl lg:text-2xl text-slate-100 tracking-wide font-bold uppercase whitespace-nowrap drop-shadow-lg shadow-black">
                             Ingeniero de Sistemas TI <span className="text-primary">|</span> Soporte, Cloud & Seguridad
                         </p>
                     </div>
@@ -73,16 +73,16 @@ export default function Hero() {
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="relative h-full flex items-end justify-center lg:justify-end pointer-events-none lg:-mr-20"
+                    className="relative h-full flex items-end justify-center lg:justify-end pointer-events-none lg:-mr-32"
                 >
-                    <div className="relative w-full h-[65vh] lg:h-[95vh] max-w-2xl lg:max-w-3xl">
+                    <div className="relative w-full h-[70vh] lg:h-[100vh] max-w-3xl lg:max-w-4xl">
                         {/* Image glow effect */}
                         <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
                         <Image
                             src="/luis2.png"
                             alt="Luis Canedo - Ingeniero TI"
                             fill
-                            className="object-contain object-bottom drop-shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 scale-110 origin-bottom"
+                            className="object-contain object-bottom drop-shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 scale-125 origin-bottom"
                             priority
                         />
                     </div>
