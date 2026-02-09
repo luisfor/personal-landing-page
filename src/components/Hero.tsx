@@ -52,7 +52,7 @@ export default function Hero() {
                             href="#contact"
                             className="px-10 py-5 bg-[var(--primary)] text-white font-bold rounded-full shadow-[0_0_20px_rgba(0,206,209,0.4)] hover:shadow-[0_0_30px_rgba(0,206,209,0.6)] hover:-translate-y-1 transition-all uppercase tracking-widest text-sm md:text-base"
                         >
-                            Contáctame
+                            Contrátame
                         </a>
                     </div>
                 </motion.div>

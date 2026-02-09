@@ -65,7 +65,7 @@ export default function About() {
                                 className="px-8 py-4 bg-[var(--secondary)] text-white font-bold rounded-full hover:bg-[var(--secondary)]/90 transition-all flex items-center justify-center gap-2 shadow-lg uppercase tracking-wide"
                             >
                                 <Mail size={20} />
-                                Contactar
+                                Contrátame
                             </a>
                         </div>
                     </div>
