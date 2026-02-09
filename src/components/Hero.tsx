@@ -76,8 +76,6 @@ export default function Hero() {
                     className="relative h-full flex items-end justify-center lg:justify-end pointer-events-none lg:-mr-32"
                 >
                     <div className="relative w-full h-[70vh] lg:h-[100vh] max-w-3xl lg:max-w-4xl">
-                        {/* Image glow effect */}
-                        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
                         <Image
                             src="/luis2.png"
                             alt="Luis Canedo - Ingeniero TI"
