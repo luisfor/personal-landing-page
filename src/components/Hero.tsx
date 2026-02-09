@@ -20,9 +20,9 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="flex flex-col items-start gap-4 pt-20 lg:pt-0 z-20"
+                    className="flex flex-col items-start gap-2 pt-20 lg:pt-0 z-20 max-w-2xl"
                 >
-                    <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-script text-primary text-white/90 transform -rotate-2 mb-2 shadow-black drop-shadow-md">
+                    <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-script text-primary text-white/90 transform -rotate-2 mb-2">
                         Hi, This Is
                     </motion.h2>
 
@@ -31,8 +31,8 @@ export default function Hero() {
                     </h1>
 
                     <div className="relative mt-4">
-                        <p className="text-lg md:text-xl lg:text-2xl text-slate-100 tracking-wide font-bold uppercase whitespace-nowrap drop-shadow-lg shadow-black">
-                            Ingeniero de Sistemas TI <span className="text-primary">|</span> Soporte, Cloud & Seguridad
+                        <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 tracking-wide font-script transform -rotate-1">
+                            Ingeniero de Sistemas TI <span className="text-primary mx-2">|</span> Soporte, Cloud & Seguridad
                         </p>
                     </div>
 
