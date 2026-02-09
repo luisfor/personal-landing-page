@@ -56,7 +56,7 @@ export default function Hero() {
                                 <Linkedin size={22} />
                             </a>
                             <a
-                                href="https://github.com/lcanedo12"
+                                href="https://github.com/luisfor"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-transparent text-white transition-all cursor-pointer hover:bg-[#333] hover:border-[#333] hover:scale-110"
