@@ -23,7 +23,7 @@ export default function ProfessionalSummary() {
                             <div className="relative pl-6 border-l-2 border-slate-200">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white"></div>
                                 <h4 className="font-bold text-slate-900">Ingeniería de Sistemas</h4>
-                                <p className="text-sm text-slate-600">Fundación Universitaria San Martín</p>
+                                <p className="text-sm text-slate-600">Fundación Universitaria Tecnológico de Comfenalco</p>
                             </div>
 
                             <div className="relative pl-6 border-l-2 border-slate-200">
@@ -34,8 +34,14 @@ export default function ProfessionalSummary() {
 
                             <div className="relative pl-6 border-l-2 border-slate-200">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white"></div>
-                                <h4 className="font-bold text-slate-900">MCSA: SQL Server 2012/2014</h4>
-                                <p className="text-sm text-slate-600">Microsoft Certified Solutions Associate</p>
+                                <h4 className="font-bold text-slate-900">MCSA: SQL Server</h4>
+                                <p className="text-sm text-slate-600">BSG Institute</p>
+                            </div>
+
+                            <div className="relative pl-6 border-l-2 border-slate-200">
+                                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-orange-500 ring-4 ring-white"></div>
+                                <h4 className="font-bold text-slate-900">Google Workspace Admin & IT Support</h4>
+                                <p className="text-sm text-slate-600">Certificación Profesional de Google (Coursera)</p>
                             </div>
                         </div>
                     </div>
@@ -71,17 +77,17 @@ export default function ProfessionalSummary() {
                         <div className="space-y-4">
                             <RoadmapItem
                                 title="English Proficiency"
-                                status="B2/C1 Goal"
-                                description="Enfoque técnico y conversación fluida."
-                                progress={75}
+                                status="Curso Activo B1 → C1"
+                                description="Mejorando fluidez técnica y conversacional."
+                                progress={65}
                                 color="bg-purple-500"
                             />
                             <RoadmapItem
-                                title="Azure Administrator"
-                                status="Certificación 2024"
-                                description="Gestión experta de recursos cloud."
+                                title="Python & AI Development"
+                                status="En Progreso"
+                                description="Automatización e integración de modelos LLM."
                                 progress={40}
-                                color="bg-blue-500"
+                                color="bg-yellow-500"
                             />
                             <RoadmapItem
                                 title="DevOps Practices"
