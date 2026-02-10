@@ -37,7 +37,8 @@ const projects = [
             { step: "VMware vCenter" },
             { step: "AWS Migration Svc" },
             { step: "Instancias AWS (VPC)" }
-        ]
+        ],
+        architectureDiagram: <AwsArchitectureDiagram />
     },
     {
         category: "Consolidación de Identidades",
@@ -84,6 +85,7 @@ const projects = [
 
 import { useState } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
+import AwsArchitectureDiagram from "./AwsArchitectureDiagram";
 
 // ... (projects array remains unchanged)
 

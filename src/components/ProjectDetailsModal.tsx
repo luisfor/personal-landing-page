@@ -15,6 +15,7 @@ interface Project {
     category: string;
     detailedPhases?: { title: string; content: string }[];
     processWorkflow?: { step: string; icon?: string }[];
+    architectureDiagram?: React.ReactNode;
 }
 
 interface ProjectDetailsModalProps {
@@ -179,10 +180,16 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                                             <p className="text-sm text-[#006d83]/80 mb-4">
                                                 Este proyecto implementó una arquitectura de alta disponibilidad.
                                             </p>
-                                            {/* Placeholder for future architecture diagram */}
-                                            <div className="w-full h-32 bg-white/50 rounded-lg flex items-center justify-center border border-dashed border-[#006d83]/30">
-                                                <span className="text-xs text-[#006d83]/50 font-medium">Diagrama de Arquitectura</span>
-                                            </div>
+
+                                            {project.architectureDiagram ? (
+                                                <div className="w-full bg-white rounded-lg overflow-hidden border border-slate-200">
+                                                    {project.architectureDiagram}
+                                                </div>
+                                            ) : (
+                                                <div className="w-full h-32 bg-white/50 rounded-lg flex items-center justify-center border border-dashed border-[#006d83]/30">
+                                                    <span className="text-xs text-[#006d83]/50 font-medium">Diagrama no disponible</span>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
