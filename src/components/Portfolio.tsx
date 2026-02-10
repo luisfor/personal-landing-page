@@ -49,7 +49,32 @@ const projects = [
         impact: "Estandarización de la comunicación interna, simplificación de la administración de usuarios y mejora del 100% en la colaboración inter-empresarial.",
         solution: "Migración masiva de correos, calendarios y archivos desde Microsoft Office 365 hacia un único tenant de Google Workspace, integrando políticas de seguridad centralizadas.",
         tags: ["Google Workspace", "Migration", "Identity Management", "Collaboration"],
-        featured: true
+        featured: true,
+        detailedPhases: [
+            {
+                title: "1. Auditoría de Tenants y Preparación",
+                content: "Analicé exhaustivamente los tres entornos aislados de Microsoft 365. Mapeé identidades de usuarios, grupos y resuelvo duplicidades de alias antes de la consolidación. Establecí el 'Source of Truth' para la nueva estructura de identidades."
+            },
+            {
+                title: "2. Estrategia de Migración Masiva",
+                content: "Utilicé herramientas de migración servidor-a-servidor para transferir correos, calendarios y contactos. Migré terabytes de datos no estructurados desde SharePoint/OneDrive hacia Google Shared Drives, preservando metadatos y permisos."
+            },
+            {
+                title: "3. Arquitectura de Identidad Unificada",
+                content: "Diseñé la arquitectura del nuevo 'Super Tenant' en Google Workspace. Implementé Unidades Organizativas (OU) lógicas para separar las empresas bajo una misma administración, aplicando políticas de seguridad (DLP, 2FA) centralizadas pero granulares."
+            },
+            {
+                title: "4. Gestión del Cambio y Cut-over",
+                content: "Ejecuté un plan de comunicación para los usuarios finales. El Cut-over (cambio de registros MX) se sincronizó un fin de semana, asegurando que el lunes por la mañana los 3 equipos operaran como una sola entidad colaborativa sin pérdida de correos."
+            }
+        ],
+        processWorkflow: [
+            { step: "3x Sources (M365 Tenants)" },
+            { step: "Migration Engine" },
+            { step: "Identity Mapping" },
+            { step: "Unified Google Workspace" }
+        ],
+        architectureDiagram: <GoogleWorkspaceArchitectureDiagram />
     },
     {
         category: "Bases de Datos",
@@ -86,6 +111,7 @@ const projects = [
 import { useState } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
 import AwsArchitectureDiagram from "./AwsArchitectureDiagram";
+import GoogleWorkspaceArchitectureDiagram from "./GoogleWorkspaceArchitectureDiagram";
 
 // ... (projects array remains unchanged)
 
