@@ -56,7 +56,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8">
+                <div className="hidden lg:flex items-center gap-8">
                     {navLinks.map((link) => {
                         const sectionId = link.href.substring(1);
                         const isActive = activeSection === sectionId;
@@ -66,8 +66,8 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 className={`text-sm font-bold uppercase transition-colors ${isActive
-                                        ? "text-[#00b4d9]"
-                                        : "text-[#333] hover:text-[#00b4d9]"
+                                    ? "text-[#00b4d9]"
+                                    : "text-[#333] hover:text-[#00b4d9]"
                                     }`}
                             >
                                 {link.name}
@@ -78,7 +78,7 @@ export default function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden p-2 text-[#333]"
+                    className="lg:hidden p-2 text-[#333]"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle menu"
                 >
@@ -93,7 +93,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white border-t border-slate-100 overflow-hidden shadow-lg"
+                        className="lg:hidden bg-white border-t border-slate-100 overflow-hidden shadow-lg"
                     >
                         <div className="flex flex-col p-6 gap-4">
                             {navLinks.map((link) => {

@@ -13,14 +13,13 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 via-slate-900/20 to-transparent" />
             </div>
 
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
-
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full text-center lg:text-left">
                 {/* Text Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="flex flex-col items-start gap-2 pt-20 lg:pt-0 z-20 max-w-2xl"
+                    className="flex flex-col items-center lg:items-start gap-2 pt-20 lg:pt-0 z-20 max-w-2xl mx-auto lg:mx-0"
                 >
                     <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-script text-primary text-white/90 transform -rotate-2 mb-2">
                         Hi, This Is
@@ -73,7 +72,7 @@ export default function Hero() {
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="relative h-full flex items-end justify-center lg:justify-end pointer-events-none lg:-mr-32"
+                    className="relative h-full items-end justify-center lg:justify-end pointer-events-none lg:-mr-32 hidden lg:flex"
                 >
                     <div className="relative w-full h-[70vh] lg:h-[100vh] max-w-3xl lg:max-w-4xl">
                         <Image
