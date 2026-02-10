@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Database, ShieldCheck, Lock, Server, Globe, ArrowRight, CheckCircle } from "lucide-react";
+import { Cloud, Database, ShieldCheck, Lock, Server, Globe, ArrowRight, CheckCircle, Terminal } from "lucide-react";
 
 const projects = [
     {
@@ -156,6 +156,90 @@ const projects = [
             { step: "Recursos Protegidos" }
         ],
         architectureDiagram: <SecurityArchitectureDiagram />
+    },
+    {
+        category: "Desarrollo Web Full Stack",
+        icon: <Terminal size={32} />,
+        title: "Desarrollo de Sistema de Inventario de Activos Tecnológicos",
+        description: "Centralización de información de hardware mediante una plataforma web robusta.",
+        challenge: "Digitalizar el control manual de equipos electrónicos y de sistemas de la Operadora Vial.",
+        impact: "Optimización de tiempos de auditoría y trazabilidad completa del ciclo de vida de los activos.",
+        solution: "Sistema híbrido PHP/Node.js con ORM para gestión eficiente de bases de datos.",
+        tags: ["PHP", "Node.js", "Sequelize", "SQL Server"],
+        featured: false,
+        detailedPhases: [
+            {
+                title: "1. Diseño del Modelo Entidad-Relación",
+                content: "Estructuré una base de datos relacional compleja para mapear servidores, estaciones de trabajo y periféricos. Implementé Sequelize ORM para abstraer las consultas SQL y garantizar la integridad referencial de los activos."
+            },
+            {
+                title: "2. Lógica de Negocio en Tiempo Real",
+                content: "Desarrollé módulos de backend para la generación de reportes dinámicos y alertas de mantenimiento. La interfaz frontend (HTML5/JS) permite a los técnicos actualizar estados de inventario desde el campo en tiempo real."
+            }
+        ],
+        processWorkflow: [
+            { step: "Interfaz Web" },
+            { step: "Backend Node/PHP" },
+            { step: "Sequelize ORM" },
+            { step: "SQL Server" }
+        ],
+        architectureDiagram: <InventoryArchitectureDiagram />
+    },
+    {
+        category: "Infraestructura & Comunicaciones",
+        icon: <Globe size={32} />,
+        title: "Implementación de Infraestructura de Correo Corporativo (Zimbra)",
+        description: "Establecimiento de un sistema de comunicación interna seguro y escalable.",
+        challenge: "Eliminar la dependencia de servicios externos básicos y unificar la identidad digital.",
+        impact: "Soberanía de datos, reducción de costos de licenciamiento y mejora en la imagen corporativa.",
+        solution: "Despliegue de Zimbra Collaboration Suite con seguridad perimetral integrada.",
+        tags: ["Zimbra", "Linux", "DNS/MX", "Security"],
+        featured: false,
+        detailedPhases: [
+            {
+                title: "1. Configuración de Transporte y DNS",
+                content: "Gestioné la configuración integral de registros DNS (MX, SPF, DKIM) para asegurar la entregabilidad. Configuré el MTA (Mail Transfer Agent) de Zimbra para optimizar el enrutamiento de correos entrantes y salientes."
+            },
+            {
+                title: "2. Seguridad y Antispam",
+                content: "Implementé políticas estrictas de filtrado de contenido utilizando Amavis y SpamAssassin integrados en Zimbra. Configuré cuotas de almacenamiento y políticas de retención para garantizar el rendimiento del servidor."
+            }
+        ],
+        processWorkflow: [
+            { step: "Dominio Corporativo" },
+            { step: "DNS / MX Records" },
+            { step: "Servidor Zimbra" },
+            { step: "Clientes de Correo" }
+        ],
+        architectureDiagram: <ZimbraArchitectureDiagram />
+    },
+    {
+        category: "Sistemas Inteligentes de Transporte (ITS)",
+        icon: <Server size={32} />,
+        title: "Modernización Tecnológica y Sistemas de Detección en Vía",
+        description: "Actualización de infraestructura crítica y despliegue de sensores industriales.",
+        challenge: "Liderar la transición tecnológica de la infraestructura de monitoreo vial.",
+        impact: "Mejora en la capacidad de respuesta ante incidentes viales y estabilidad del centro de control.",
+        solution: "Integración de sensores ITS con nueva red de cómputo Windows 10.",
+        tags: ["ITS Sensors", "Windows 10", "Hardware", "Networking"],
+        featured: false,
+        detailedPhases: [
+            {
+                title: "1. Logística de Despliegue de Hardware",
+                content: "Coordiné la renovación masiva de equipos de cómputo, migrando a workstations Windows 10 optimizadas para aplicaciones de monitoreo. Supervisé la instalación física de sensores en puntos críticos de la vía."
+            },
+            {
+                title: "2. Integración de Sistemas ITS",
+                content: "Aseguré la comunicación fluida entre los sensores de campo y el software de gestión central. Calibré los sistemas de detección vehicular para garantizar la precisión de los datos de tráfico en tiempo real."
+            }
+        ],
+        processWorkflow: [
+            { step: "Sensores de Vía" },
+            { step: "Sistemas Detección" },
+            { step: "Red Comunicaciones" },
+            { step: "Centro de Control" }
+        ],
+        architectureDiagram: <ItsArchitectureDiagram />
     }
 ];
 
@@ -166,6 +250,9 @@ import GoogleWorkspaceArchitectureDiagram from "./GoogleWorkspaceArchitectureDia
 import DatabaseArchitectureDiagram from "./DatabaseArchitectureDiagram";
 import VirtualizationArchitectureDiagram from "./VirtualizationArchitectureDiagram";
 import SecurityArchitectureDiagram from "./SecurityArchitectureDiagram";
+import InventoryArchitectureDiagram from "./InventoryArchitectureDiagram";
+import ZimbraArchitectureDiagram from "./ZimbraArchitectureDiagram";
+import ItsArchitectureDiagram from "./ItsArchitectureDiagram";
 
 // ... (projects array remains unchanged)
 
