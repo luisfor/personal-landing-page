@@ -13,6 +13,8 @@ interface Project {
     impact: string;
     tags: string[];
     category: string;
+    detailedPhases?: { title: string; content: string }[];
+    processWorkflow?: { step: string; icon?: string }[];
 }
 
 interface ProjectDetailsModalProps {
@@ -56,7 +58,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col pointer-events-auto"
+                            className="bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col pointer-events-auto"
                         >
                             {/* Header Image / Pattern Placeholder */}
                             <div className="h-40 bg-gradient-to-r from-slate-900 via-[#00b4d9] to-slate-900 relative overflow-hidden flex-shrink-0">
@@ -74,7 +76,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                                 </button>
                             </div>
 
-                            {/* ... Rest of content ... */}
                             {/* Body */}
                             <div className="p-8 md:p-12">
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
@@ -93,15 +94,56 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                                 {/* Main Content Grid */}
                                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                     <div className="lg:col-span-2 space-y-8">
-                                        <div>
-                                            <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                                                <Terminal size={20} className="text-[#00b4d9]" /> Descripción General
-                                            </h3>
-                                            <p className="text-slate-600 leading-relaxed text-lg">
-                                                {project.description}
-                                            </p>
-                                        </div>
 
+                                        {/* Detailed Narrative Steps */}
+                                        {project.detailedPhases ? (
+                                            <div className="space-y-8">
+                                                {project.detailedPhases.map((phase, idx) => (
+                                                    <div key={idx} className="border-l-4 border-[#00b4d9] pl-4">
+                                                        <h3 className="text-lg font-bold text-slate-800 mb-2">{phase.title}</h3>
+                                                        <p className="text-slate-600 leading-relaxed text-base">{phase.content}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <div>
+                                                <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                                    <Terminal size={20} className="text-[#00b4d9]" /> Descripción General
+                                                </h3>
+                                                <p className="text-slate-600 leading-relaxed text-lg">
+                                                    {project.description}
+                                                </p>
+                                            </div>
+                                        )}
+
+                                        {/* Process Diagram if available */}
+                                        {project.processWorkflow && (
+                                            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                                                <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2 text-sm uppercase tracking-wide">
+                                                    <Server size={18} className="text-[#00b4d9]" /> Diagrama de Proceso
+                                                </h4>
+                                                <div className="flex flex-col md:flex-row items-center justify-between gap-4 relative">
+                                                    {project.processWorkflow.map((step, idx) => (
+                                                        <div key={idx} className="flex flex-col items-center text-center relative z-10 w-full md:w-auto">
+                                                            <div className="w-16 h-16 bg-white border-2 border-[#00b4d9] rounded-xl flex items-center justify-center text-[#00b4d9] shadow-md mb-3">
+                                                                <Server size={28} /> {/* Generic icon fallback */}
+                                                            </div>
+                                                            <span className="text-xs font-bold text-slate-700 max-w-[120px]">{step.step}</span>
+
+                                                            {/* Arrow Connector */}
+                                                            {idx < project.processWorkflow!.length - 1 && (
+                                                                <div className="hidden md:block absolute top-8 left-[60%] w-[100%] h-[2px] bg-slate-200 -z-10"></div>
+                                                            )}
+                                                            {idx < project.processWorkflow!.length - 1 && (
+                                                                <div className="md:hidden my-2 text-slate-300">↓</div>
+                                                            )}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {/* Key Metrics / Challenge & Impact */}
                                         <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 space-y-6">
                                             <div>
                                                 <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2 text-sm uppercase tracking-wide">

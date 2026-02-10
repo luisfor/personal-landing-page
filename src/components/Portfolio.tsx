@@ -13,7 +13,31 @@ const projects = [
         impact: "Eliminación de la dependencia de hardware físico (On-Premise), mejora en la alta disponibilidad y reducción de costos operativos.",
         solution: "Configuración de instancias en AWS, gestión de VMware vCenter para la exportación de servidores y aseguramiento de la integridad de los datos durante la transición.",
         tags: ["AWS", "VMware", "Cloud Migration", "Infrastructure"],
-        featured: true
+        featured: true,
+        detailedPhases: [
+            {
+                title: "1. Fase de Evaluación y Discovery",
+                content: "Realicé un inventario exhaustivo de activos On-Premise y un análisis de dependencias de las máquinas virtuales existentes. Esto permitió mapear la interconexión de las aplicaciones y determinar el 'Move Group' óptimo para minimizar riesgos."
+            },
+            {
+                title: "2. Estrategia de Migración (Rehosting)",
+                content: "Opté por un enfoque de 'Lift and Shift' robusto debido a la criticidad del tiempo. Utilicé VMware vCenter Connector para sincronizar las cargas de trabajo hacia AWS Application Migration Service (MGN), asegurando compatibilidad total."
+            },
+            {
+                title: "3. Ejecución y Sincronización",
+                content: "Configuré la replicación continua de bloques a nivel de volumen. Durante la ventana de mantenimiento (Cut-Over), realicé pruebas de integridad y cambié los registros DNS, logrando una transición con casi cero tiempo de inactividad perceptible."
+            },
+            {
+                title: "4. Optimización Post-Migración",
+                content: "Una vez en la nube, redimensioné las instancias EC2 (Right-Sizing) basándome en métricas reales de CloudWatch y configuré Auto Scaling Groups para manejar picos de tráfico, desmantelando finalmente el hardware físico obsoleto."
+            }
+        ],
+        processWorkflow: [
+            { step: "Data Center Local" },
+            { step: "VMware vCenter" },
+            { step: "AWS Migration Svc" },
+            { step: "Instancias AWS (VPC)" }
+        ]
     },
     {
         category: "Consolidación de Identidades",
