@@ -83,8 +83,25 @@ const projects = [
         description: "Diseño y gestión integral de ecosistemas de SQL Server, especializado en seguridad y recuperación de datos.",
         challenge: "Garantizar la integridad y el rendimiento de bases de datos críticas para la operación vial y comercial.",
         impact: "Reducción de tiempos de respuesta en reportes y cumplimiento de estándares de seguridad de datos.",
+        solution: "Implementación de planes de mantenimiento preventivo, optimización de índices y auditoría de accesos.",
         tags: ["SQL Server (MCSA)", "Transact-SQL", "Windows Server"],
-        featured: false
+        featured: false,
+        detailedPhases: [
+            {
+                title: "1. Proceso de Tuning y Optimización",
+                content: "Realicé un análisis profundo de los planes de ejecución para identificar cuellos de botella. Implementé reindexación estratégica y optimicé consultas T-SQL complejas, logrando una reducción drástica en los tiempos de respuesta de reportes críticos."
+            },
+            {
+                title: "2. Seguridad de la Capa de Datos",
+                content: "Implementé políticas de auditoría granular para rastrear accesos sensibles. Endurecí la configuración del servidor (Hardening) bajo el principio de menor privilegio, garantizando la integridad de la operación comercial frente a accesos no autorizados."
+            }
+        ],
+        processWorkflow: [
+            { step: "Motores SQL Server" },
+            { step: "Query Tuning" },
+            { step: "High Perf DB" }
+        ],
+        architectureDiagram: <DatabaseArchitectureDiagram />
     },
     {
         category: "Continuidad del Negocio",
@@ -93,8 +110,25 @@ const projects = [
         description: "Implementación de planes de Disaster Recovery y alta disponibilidad mediante virtualización.",
         challenge: "Eliminar puntos únicos de fallo en la infraestructura de servidores físicos y virtuales.",
         impact: "Garantía de recuperación inmediata de servicios ante fallos críticos de hardware o software.",
+        solution: "Despliegue de clusters de virtualización y sistemas de respaldo inmutable.",
         tags: ["Veeam Backup", "VMware vCenter", "Hyper-V"],
-        featured: false
+        featured: false,
+        detailedPhases: [
+            {
+                title: "1. Arquitectura de Virtualización",
+                content: "Gestioné clústeres de alta disponibilidad en VMware vCenter e Hyper-V. Esta arquitectura redundante eliminó puntos únicos de fallo, permitiendo que los servidores críticos (ERP, CRM) siguieran operando incluso ante la caída de un host físico."
+            },
+            {
+                title: "2. Estrategia de Disaster Recovery",
+                content: "Diseñé e implementé políticas de respaldo inmutable con Veeam Backup & Replication. Establecí RTOs y RPOs agresivos para asegurar la recuperación inmediata de servicios vitales ante incidentes de hardware o ataques de ransomware."
+            }
+        ],
+        processWorkflow: [
+            { step: "Infraestructura Virtual" },
+            { step: "Veeam Replication" },
+            { step: "Sitos Contingencia" }
+        ],
+        architectureDiagram: <VirtualizationArchitectureDiagram />
     },
     {
         category: "Ciberseguridad",
@@ -103,8 +137,25 @@ const projects = [
         description: "Despliegue de soluciones de acceso seguro y control de identidades para entornos corporativos remotos.",
         challenge: "Asegurar la red interna contra amenazas externas manteniendo la facilidad de acceso para el personal.",
         impact: "Fortalecimiento de la seguridad de la red y cumplimiento de normativas de acceso seguro a la información.",
+        solution: "Implementación de políticas Zero Trust y autenticación multifactor (MFA).",
         tags: ["Okta", "AppGate", "Fortigate", "Mosyle"],
-        featured: false
+        featured: false,
+        detailedPhases: [
+            {
+                title: "1. Implementación de Zero Trust",
+                content: "Desplegué una arquitectura de acceso seguro moderna utilizando Okta para gestión de identidades y AppGate para perímetros definidos por software (SDP), asegurando que solo usuarios verificados accedan a recursos corporativos."
+            },
+            {
+                title: "2. Gestión y Hardening de Red",
+                content: "Configuré reglas estrictas de firewall en equipos Fortigate y controlé la flota de dispositivos móviles mediante Mosyle (MDM), cerrando brechas de seguridad en el acceso remoto y protegiendo los activos intelectuales de la empresa."
+            }
+        ],
+        processWorkflow: [
+            { step: "Usuario/Dispositivo" },
+            { step: "Túnel AppGate/Okta" },
+            { step: "Recursos Protegidos" }
+        ],
+        architectureDiagram: <SecurityArchitectureDiagram />
     }
 ];
 
@@ -112,6 +163,9 @@ import { useState } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
 import AwsArchitectureDiagram from "./AwsArchitectureDiagram";
 import GoogleWorkspaceArchitectureDiagram from "./GoogleWorkspaceArchitectureDiagram";
+import DatabaseArchitectureDiagram from "./DatabaseArchitectureDiagram";
+import VirtualizationArchitectureDiagram from "./VirtualizationArchitectureDiagram";
+import SecurityArchitectureDiagram from "./SecurityArchitectureDiagram";
 
 // ... (projects array remains unchanged)
 
