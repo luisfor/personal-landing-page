@@ -58,7 +58,16 @@ const projects = [
     }
 ];
 
+import { useState } from "react";
+import ProjectDetailsModal from "./ProjectDetailsModal";
+
+// ... (projects array remains unchanged)
+
 export default function Portfolio() {
+    // Define the Project type based on the projects array structure
+    type Project = typeof projects[0];
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
     return (
         <section id="portfolio" className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-6">
@@ -189,6 +198,12 @@ export default function Portfolio() {
                     </div>
                 </div>
             </div>
-        </section>
+
+            <ProjectDetailsModal
+                project={selectedProject}
+                isOpen={!!selectedProject}
+                onClose={() => setSelectedProject(null)}
+            />
+        </section >
     );
 }
