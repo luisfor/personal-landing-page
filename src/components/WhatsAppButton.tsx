@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function WhatsAppButton() {
-    const whatsappUrl = "https://wa.me/573160437913?text=Hola%20Luis%20Canedo%2C%20vi%20tu%20portafolio%20de%20Ingenier%C3%ADa%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto";
+    const whatsappUrl = "https://wa.me/573160437913?text=Hola%20Luis%20Canedo%2C%20vi%20tu%20portafolio%20en%20LinkedIn%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional";
 
     return (
         <motion.a
@@ -29,13 +29,13 @@ export default function WhatsAppButton() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-2xl border-2 border-white flex items-center justify-center cursor-pointer group"
-            aria-label="Contactar soporte técnico en WhatsApp"
+            aria-label="Consultar disponibilidad profesional en WhatsApp"
         >
             <MessageCircle size={32} fill="white" className="text-white" />
 
             {/* Tooltip */}
             <span className="absolute right-full mr-4 bg-white text-slate-800 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                Contactar a soporte técnico
+                Consultar disponibilidad profesional / Hablemos de TI
             </span>
         </motion.a>
     );
