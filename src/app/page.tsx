@@ -3,7 +3,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Experience from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
-import LearningPath from "@/components/LearningPath";
+import ProfessionalSummary from "@/components/ProfessionalSummary";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -22,7 +22,7 @@ export default function Home() {
 
       <Portfolio />
 
-      <LearningPath />
+      <ProfessionalSummary />
 
       <Contact />
 
