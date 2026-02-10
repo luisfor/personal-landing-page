@@ -7,8 +7,8 @@ const projects = [
     {
         category: "Cloud Infrastructure Migration",
         icon: <Cloud size={32} />,
-        title: "Migración Estratégica de Infraestructura a la Nube (AWS)",
-        description: "Este proyecto resalta tu capacidad técnica para mover cargas de trabajo críticas entre entornos radicalmente distintos.",
+        title: "Migración Estratégica de Infraestructura Física a la Nube (AWS)",
+        description: "Este proyecto resalta mi capacidad técnica para mover cargas de trabajo críticas entre entornos radicalmente distintos.",
         challenge: "Migrar una arquitectura de servidores físicos y máquinas virtuales desde centros de datos locales hacia una infraestructura escalable y resiliente en la nube.",
         impact: "Eliminación de la dependencia de hardware físico (On-Premise), mejora en la alta disponibilidad y reducción de costos operativos.",
         solution: "Configuración de instancias en AWS, gestión de VMware vCenter para la exportación de servidores y aseguramiento de la integridad de los datos durante la transición.",
@@ -18,13 +18,23 @@ const projects = [
     {
         category: "Consolidación de Identidades",
         icon: <Globe size={32} />,
-        title: "Unificación Corporativa: Migración Multi-Tenant a Google Workspace",
-        description: "Este proyecto demuestra tu habilidad de gestión y arquitectura de plataformas de colaboración a gran escala.",
+        title: "Unificación Corporativa: Migración de Correos y Archivos de Microsoft 365 a Google Workspace",
+        description: "Este proyecto demuestra mi habilidad de gestión y arquitectura de plataformas de colaboración a gran escala.",
         challenge: "Consolidar la operación de 3 empresas independientes que operaban en dominios aislados bajo una única plataforma unificada.",
         impact: "Estandarización de la comunicación interna, simplificación de la administración de usuarios y mejora del 100% en la colaboración inter-empresarial.",
         solution: "Migración masiva de correos, calendarios y archivos desde Microsoft Office 365 hacia un único tenant de Google Workspace, integrando políticas de seguridad centralizadas.",
         tags: ["Google Workspace", "Migration", "Identity Management", "Collaboration"],
         featured: true
+    },
+    {
+        category: "Bases de Datos",
+        icon: <Database size={32} />,
+        title: "Administración y Seguridad de Bases de Datos Enterprise",
+        description: "Diseño y gestión integral de ecosistemas de SQL Server, especializado en seguridad y recuperación de datos.",
+        challenge: "Garantizar la integridad y el rendimiento de bases de datos críticas para la operación vial y comercial.",
+        impact: "Reducción de tiempos de respuesta en reportes y cumplimiento de estándares de seguridad de datos.",
+        tags: ["SQL Server (MCSA)", "Transact-SQL", "Windows Server"],
+        featured: false
     },
     {
         category: "Continuidad del Negocio",
