@@ -2,6 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Server, Shield, Cloud, Terminal, CheckCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 interface Project {
     title: string;
@@ -20,9 +22,23 @@ interface ProjectDetailsModalProps {
 }
 
 export default function ProjectDetailsModal({ project, isOpen, onClose }: ProjectDetailsModalProps) {
-    if (!project) return null;
+    const [mounted, setMounted] = useState(false);
 
-    return (
+    useEffect(() => {
+        setMounted(true);
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
+    if (!project || !mounted) return null;
+
+    return createPortal(
         <AnimatePresence>
             {isOpen && (
                 <>
@@ -32,7 +48,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                        className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
                     >
                         {/* Modal Content */}
                         <motion.div
@@ -40,7 +56,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col"
+                            className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col pointer-events-auto"
                         >
                             {/* Header Image / Pattern Placeholder */}
                             <div className="h-40 bg-gradient-to-r from-slate-900 via-[#00b4d9] to-slate-900 relative overflow-hidden flex-shrink-0">
@@ -52,12 +68,13 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                                 </div>
                                 <button
                                     onClick={onClose}
-                                    className="absolute top-6 right-6 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full transition-colors"
+                                    className="absolute top-6 right-6 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full transition-colors cursor-pointer"
                                 >
                                     <X size={24} />
                                 </button>
                             </div>
 
+                            {/* ... Rest of content ... */}
                             {/* Body */}
                             <div className="p-8 md:p-12">
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
@@ -132,6 +149,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                     </motion.div>
                 </>
             )}
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     );
 }

@@ -143,7 +143,10 @@ export default function Portfolio() {
                                         ))}
                                     </div>
 
-                                    <button className="inline-flex items-center gap-2 bg-[#00b4d9] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#009ac0] transition-colors shadow-md hover:shadow-lg">
+                                    <button
+                                        onClick={() => setSelectedProject(project)}
+                                        className="inline-flex items-center gap-2 bg-[#00b4d9] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#009ac0] transition-colors shadow-md hover:shadow-lg cursor-pointer relative z-10"
+                                    >
                                         Ver Arquitectura <ArrowRight size={18} />
                                     </button>
                                 </div>
@@ -189,7 +192,10 @@ export default function Portfolio() {
                                 </div>
 
                                 <div className="mt-auto pt-4 border-t border-slate-50">
-                                    <button className="w-full inline-flex items-center justify-center gap-2 text-sm font-bold text-[#00b4d9] bg-[#ebfcfd] py-2 rounded-lg hover:bg-[#00b4d9] hover:text-white transition-all">
+                                    <button
+                                        onClick={() => setSelectedProject(project)}
+                                        className="w-full inline-flex items-center justify-center gap-2 text-sm font-bold text-[#00b4d9] bg-[#ebfcfd] py-2 rounded-lg hover:bg-[#00b4d9] hover:text-white transition-all cursor-pointer relative z-10"
+                                    >
                                         Ver Detalles Técnicos
                                     </button>
                                 </div>
