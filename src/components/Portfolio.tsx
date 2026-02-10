@@ -5,24 +5,26 @@ import { Cloud, Database, ShieldCheck, Lock, Server, Globe, ArrowRight, CheckCir
 
 const projects = [
     {
-        category: "Caso de Éxito Principal",
+        category: "Cloud Infrastructure Migration",
         icon: <Cloud size={32} />,
-        title: "Migración y Unificación de Infraestructura Empresarial",
-        description: "Lideré la migración estratégica de máquinas virtuales desde entornos locales (On-Premise) hacia la nube de AWS.",
-        challenge: "Unificar los servicios de correo de múltiples empresas independientes bajo una plataforma única y centralizada de Google Workspace.",
-        impact: "Centralización total de la identidad corporativa y optimización del acceso remoto mediante Single Sign-On (SSO) y MDM.",
-        tags: ["AWS", "Microsoft 365", "Google Workspace", "VMware"],
+        title: "Migración Estratégica de Infraestructura a la Nube (AWS)",
+        description: "Este proyecto resalta tu capacidad técnica para mover cargas de trabajo críticas entre entornos radicalmente distintos.",
+        challenge: "Migrar una arquitectura de servidores físicos y máquinas virtuales desde centros de datos locales hacia una infraestructura escalable y resiliente en la nube.",
+        impact: "Eliminación de la dependencia de hardware físico (On-Premise), mejora en la alta disponibilidad y reducción de costos operativos.",
+        solution: "Configuración de instancias en AWS, gestión de VMware vCenter para la exportación de servidores y aseguramiento de la integridad de los datos durante la transición.",
+        tags: ["AWS", "VMware", "Cloud Migration", "Infrastructure"],
         featured: true
     },
     {
-        category: "Bases de Datos",
-        icon: <Database size={32} />,
-        title: "Administración y Seguridad de Bases de Datos Enterprise",
-        description: "Diseño y gestión integral de ecosistemas de SQL Server, especializado en seguridad y recuperación de datos.",
-        challenge: "Garantizar la integridad y el rendimiento de bases de datos críticas para la operación vial y comercial.",
-        impact: "Reducción de tiempos de respuesta en reportes y cumplimiento de estándares de seguridad de datos.",
-        tags: ["SQL Server (MCSA)", "Transact-SQL", "Windows Server"],
-        featured: false
+        category: "Consolidación de Identidades",
+        icon: <Globe size={32} />,
+        title: "Unificación Corporativa: Migración Multi-Tenant a Google Workspace",
+        description: "Este proyecto demuestra tu habilidad de gestión y arquitectura de plataformas de colaboración a gran escala.",
+        challenge: "Consolidar la operación de 3 empresas independientes que operaban en dominios aislados bajo una única plataforma unificada.",
+        impact: "Estandarización de la comunicación interna, simplificación de la administración de usuarios y mejora del 100% en la colaboración inter-empresarial.",
+        solution: "Migración masiva de correos, calendarios y archivos desde Microsoft Office 365 hacia un único tenant de Google Workspace, integrando políticas de seguridad centralizadas.",
+        tags: ["Google Workspace", "Migration", "Identity Management", "Collaboration"],
+        featured: true
     },
     {
         category: "Continuidad del Negocio",
@@ -91,13 +93,21 @@ export default function Portfolio() {
                                         {project.description}
                                     </p>
 
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 bg-slate-50 p-6 rounded-xl border border-slate-100">
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 bg-slate-50 p-6 rounded-xl border border-slate-100">
                                         <div>
                                             <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
                                                 <div className="w-2 h-2 bg-red-400 rounded-full"></div> El Reto
                                             </h5>
                                             <p className="text-sm text-slate-600">{project.challenge}</p>
                                         </div>
+                                        {project.solution && (
+                                            <div>
+                                                <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div> La Solución
+                                                </h5>
+                                                <p className="text-sm text-slate-600">{project.solution}</p>
+                                            </div>
+                                        )}
                                         <div>
                                             <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
                                                 <div className="w-2 h-2 bg-emerald-400 rounded-full"></div> El Impacto
