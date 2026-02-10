@@ -74,7 +74,7 @@ export default function Portfolio() {
 
                 <div className="grid grid-cols-1 gap-8">
                     {/* Featured Project spans full width on desktop */}
-                    <div className="col-span-1">
+                    <div className="col-span-1 flex flex-col gap-12">
                         {projects.filter(p => p.featured).map((project, index) => (
                             <motion.div
                                 key={index}
