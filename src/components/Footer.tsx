@@ -1,6 +1,6 @@
 "use client";
 
-import { Linkedin, ArrowUp } from "lucide-react";
+import { Linkedin, Github, ArrowUp } from "lucide-react";
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -36,6 +36,15 @@ export default function Footer() {
                             aria-label="LinkedIn"
                         >
                             <Linkedin size={20} />
+                        </a>
+                        <a
+                            href="https://github.com/luisfor"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-[#00b4d9] hover:bg-[#00b4d9] hover:text-white transition-all cursor-pointer"
+                            aria-label="GitHub"
+                        >
+                            <Github size={20} />
                         </a>
                     </div>
                 </div>
