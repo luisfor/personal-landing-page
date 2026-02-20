@@ -25,6 +25,131 @@
   --muted-foreground: #64748b;
 
   /* Font fallbacks are handled by next/font */
+
+  /* Enterprise Motion System */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.25s;
+  --duration-normal: 0.5s;
+  --duration-slow: 0.8s;
+}
+
+/* Hover Intelligence (Pro Level) */
+@media (hover: hover) and (pointer: fine) {
+  .hover-premium {
+    transition: transform var(--duration-fast) var(--ease-premium),
+      box-shadow var(--duration-fast) var(--ease-premium),
+      border-color var(--duration-fast) var(--ease-premium),
+      background-color var(--duration-fast) var(--ease-premium);
+  }
+
+  .hover-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -10px rgba(0, 180, 217, 0.2), 0 8px 16px -8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Variant for cards that already have a base transform/scale */
+  .hover-premium-card {
+    transition: transform var(--duration-normal) var(--ease-premium),
+      box-shadow var(--duration-normal) var(--ease-premium);
+  }
+
+  .hover-premium-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 40px -15px rgba(0, 180, 217, 0.15), 0 15px 25px -10px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Subtle Hero BG Animation */
+@keyframes ultimate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-ultimate-gradient {
+  background-size: 200% 200%;
+  animation: ultimate-gradient 30s ease infinite;
+}
+
+/* Hero Animated Grid */
+@keyframes grid-flow {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+.animate-grid-flow {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-flow 20s linear infinite;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Glowing CTA Button */
+.cta-glow-premium {
+  position: relative;
+  transition: transform var(--duration-fast) var(--ease-premium),
+    box-shadow var(--duration-fast) var(--ease-premium),
+    background-color var(--duration-fast) var(--ease-premium);
+}
+
+.cta-glow-premium::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #00b4d9, #005c8a, #00b4d9);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-premium);
+  filter: blur(8px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cta-glow-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 180, 217, 0.4);
+  }
+
+  .cta-glow-premium:hover::before {
+    opacity: 0.8;
+    animation: ultimate-gradient 3s linear infinite;
+    background-size: 200% 200%;
+  }
+}
+
+/* Section Divider Glow */
+.section-divider-glow {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 180, 217, 0.2), transparent);
+}
+
+.section-divider-glow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 180, 217, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {

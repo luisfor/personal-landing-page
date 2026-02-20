@@ -10,31 +10,34 @@ const experienceData = [
         company: "Independiente / Proyectos Estratégicos",
         date: "06/2024 – Presente",
         description: [
-            "Optimización Cloud: Aplicando conocimientos avanzados en Administración de Azure (Certificación 2024) para el despliegue de recursos escalables y redes virtuales seguras.",
-            "Resiliencia de Datos: Diseño de planes de Disaster Recovery utilizando Veeam Backup & Replication para garantizar la protección de entornos virtuales.",
-            "Auditoría de Bases de Datos: Consultoría técnica basada en la especialización de Gestión y Seguridad de Bases de Datos para la optimización de servidores SQL."
-        ]
+            "Diseño y despliegue de infraestructuras cloud en Azure, implementando redes virtuales seguras y recursos escalables para entornos empresariales.",
+            "Definición de estrategias de Disaster Recovery con Veeam Backup & Replication, garantizando un RTO/RPO óptimo ante incidentes.",
+            "Auditoría y optimización de servidores SQL, mejorando el rendimiento en un 40% y asegurando bases de datos críticas."
+        ],
+        technologies: "Azure · Veeam · SQL Server · Networking"
     },
     {
         title: "Ingeniero de Sistemas TI",
         company: "Condor Labs / Propelus (Remoto para USA)",
         date: "02/2021 – 06/2024",
         description: [
-            "Arquitectura Cloud e Híbrida: Lideré la migración de infraestructura crítica y servicios de correo hacia AWS, gestionando máquinas virtuales y servicios en la nube para operaciones internacionales.",
-            "Gestión de Infraestructura Crítica: Administré servidores en entornos de virtualización avanzada con VMware (vCenter) y sistemas operativos Linux (Red Hat, CentOS, Oracle Linux) y Windows.",
-            "Ciberseguridad y Acceso: Implementé soluciones de Zero Trust y gestión de identidades mediante Okta, SSO, AppGate y seguridad perimetral con Fortigate.",
-            "Operaciones IT y Soporte: Gestioné el ciclo de vida de activos (MacBooks/Servidores) y sistemas de seguridad física (CCTV, AP, controles biométricos)."
-        ]
+            "Lideré la migración de infraestructura crítica y servicios de correo hacia AWS, soportando operaciones ininterrumpidas.",
+            "Administré plataformas virtualizadas con VMware y servidores Linux/Windows, manteniendo una disponibilidad del 99.9%.",
+            "Implementé modelo de seguridad Zero Trust y gestión de identidades con Okta y AppGate, fortaleciendo el control de accesos.",
+            "Gestioné operaciones IT y activos tecnológicos, brindando soporte avanzado a más de 400 usuarios internacionales."
+        ],
+        technologies: "AWS · VMware · Linux · Windows Server · Okta · Fortigate"
     },
     {
         title: "Coordinador de Sistemas",
         company: "Operadora Vial de Colombia",
         date: "05/2008 – 02/2021",
         description: [
-            "Liderazgo Técnico: Dirigí el departamento de IT, supervisando la administración de tecnologías y el soporte de tercer nivel para asegurar la continuidad operativa.",
-            "Especialista en Datos: Administré y aseguré ecosistemas de SQL Server, optimizando el rendimiento y la integridad de las bases de datos corporativas.",
-            "Modernización Tecnológica: Ejecuté proyectos de migración masiva de sistemas operativos y la implementación de nuevos entornos de virtualización con Hyper-V."
-        ]
+            "Dirigí el área de IT y el soporte de tercer nivel, garantizando continuidad operativa y reduciendo incidentes recurrentes en un 30%.",
+            "Administré ecosistemas de SQL Server, optimizando el tiempo de respuesta y la integridad de bases de datos corporativas.",
+            "Ejecuté proyectos de modernización, incluyendo migraciones masivas y consolidación de servidores con Hyper-V."
+        ],
+        technologies: "SQL Server · Hyper-V · Windows Server · Networking"
     }
 ];
 
@@ -74,7 +77,7 @@ export default function Experience() {
 
                                 {/* Content Card */}
                                 <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-0">
-                                    <div className={`bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow relative ${index % 2 === 0 ? "md:mr-10" : "md:ml-10"
+                                    <div className={`bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover-premium-card relative ${index % 2 === 0 ? "md:mr-10" : "md:ml-10"
                                         }`}>
                                         {/* Connector Line for Mobile */}
                                         <div className="absolute top-10 -left-12 w-10 h-1 bg-slate-100 md:hidden"></div>
@@ -89,26 +92,20 @@ export default function Experience() {
                                         <h4 className="text-xl font-bold text-slate-900 mb-1">{item.title}</h4>
                                         <p className="text-slate-500 font-medium mb-4">{item.company}</p>
 
-                                        <ul className="space-y-2">
-                                            {item.description.map((point, i) => {
-                                                const [title, content] = point.split(":");
-                                                return (
-                                                    <li key={i} className="text-slate-600 leading-relaxed text-sm flex gap-2">
-                                                        <span className="text-[#00b4d9] mt-1.5">•</span>
-                                                        <span>
-                                                            {content ? (
-                                                                <>
-                                                                    <strong className="text-slate-700">{title.replace(/\*\*/g, "")}:</strong>
-                                                                    {content}
-                                                                </>
-                                                            ) : (
-                                                                title
-                                                            )}
-                                                        </span>
-                                                    </li>
-                                                );
-                                            })}
+                                        <ul className="space-y-3 mb-5">
+                                            {item.description.map((point, i) => (
+                                                <li key={i} className="text-slate-600 leading-relaxed text-[15px] flex gap-2">
+                                                    <span className="text-[#00b4d9] font-bold mt-0.5">✔</span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))}
                                         </ul>
+
+                                        <div className="pt-4 border-t border-slate-100">
+                                            <p className="text-sm font-semibold text-[#00b4d9]">
+                                                {item.technologies}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

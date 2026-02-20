@@ -1,55 +1,51 @@
-# 👨‍💻 Luis Canedo | Systems & Infrastructure Engineer
+# 👨‍💻 Luis Canedo | Especialista en Infraestructuras Cloud y Datos
 
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-white?style=for-the-badge&logo=framer&logoColor=black)
 
-> **Portfolio Profesional y Landing Page Personal**
+> **Portfolio Profesional y Landing Page Personal (Enterprise Edition)**
 > 
-> *Diseñado para destacar la experiencia en Soporte TI, Infraestructura Cloud y Ciberseguridad.*
+> *Diseñado para destacar resultados empresariales en Infraestructura Cloud, Automatización DevOps y Ciberseguridad.*
 
 ---
 
 ## 🚀 Sobre el Proyecto
 
-Este repositorio contiene el código fuente de mi sitio web personal. Es una **Landing Page moderna, rápida y totalmente responsiva**, construida con las últimas tecnologías web para ofrecer una experiencia de usuario fluida y profesional.
+Este repositorio contiene el código fuente de mi sitio web personal, llevado a un nivel de **Enterprise SaaS**. Es una Landing Page altamente optimizada que combina sólida ingeniería web con técnicas de persuasión y diseño de primera categoría (UX/UI Premium).
 
-El objetivo es presentar mis servicios y experiencia como **Ingeniero de Sistemas** de una manera visualmente impactante.
+El objetivo es posicionar mi perfil no solo como un ingeniero técnico, sino como un **Consultor Senior** que aporta valor real, disponibilidad, escalabilidad y seguridad a las empresas.
 
-### ✨ Características Principales
+### ✨ Características Principales (UI/UX Level Dios)
 
-*   **⚡ Performance Extrema**: Construido con Next.js 15 (App Router) para una carga instantánea.
-*   **🎨 Diseño Moderno**: Estilo visual limpio inspirado en `MeetMe`, con paleta de colores personalizada (Azul Cielo `#00b4d9` & Blanco).
-*   **📱 Totalmente Responsivo**: Se adapta perfectamente a móviles, tablets y escritorio.
-*   **✨ Animaciones Fluidas**: Integración de `Framer Motion` para transiciones suaves y atractivas.
-*   **🛠️ Componentes UI**: Arquitectura modular utilizando React y Tailwind CSS.
+*   **⚡ Performance Extrema**: Construido con Next.js 15 (App Router) y React.
+*   **🎨 Diseño Enterprise Premium**: UI sofisticada con micro-interacciones, sombras avanzadas, glassmorphism y sistema de movimiento fluido (Framer Motion).
+*   **✨ Hover Intelligence**: Tarjetas y componentes interactivos que reaccionan con elevaciones suaves y glows sutiles para una percepción *high-end*.
+*   **🧩 Motion Backgrounds**: Grillas tecnológicas animadas y degradados en movimiento orientados a perfiles Tech/Cloud.
+*   **📈 Posicionamiento Estratégico**: Copywriting enfocado en "Casos de Éxito", métricas de impacto empresarial y metodologías como Zero Trust y Disaster Recovery.
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
-
-Este proyecto ha sido desarrollado utilizando un stack tecnológico robusto y moderno:
 
 *   **Framework**: [Next.js 15](https://nextjs.org/)
 *   **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
 *   **Estilos**: [Tailwind CSS v4](https://tailwindcss.com/)
 *   **Animaciones**: [Framer Motion](https://www.framer.com/motion/)
 *   **Iconos**: [Lucide React](https://lucide.dev/)
-*   **Fuentes**: Google Fonts (Inter & Sacramento)
 
 ---
 
 ## 👤 Autor
 
-Este proyecto ha sido diseñado, desarrollado y es mantenido por:
-
 ### **Luis Canedo**
-**Ingeniero de Sistemas | Soporte TI | Cloud & Seguridad**
+**Consultor Senior en Infraestructura y Datos | Especialista Cloud & DevOps**
 
-*   Expertise en administración de servidores e infraestructura.
-*   Especialista en soluciones Cloud (AWS, Azure, Google Workspace).
-*   Soporte Técnico Especializado (Nivel 3).
+Ayudo a empresas a escalar, asegurar y modernizar su infraestructura tecnológica:
+*   Arquitectura y migraciones Cloud (AWS, Azure).
+*   Gestión de identidades y seguridad perimetral (Okta, Fortigate, Zero Trust).
+*   Automatización y virtualización crítica (VMware, SQL Server).
 
 ---
 

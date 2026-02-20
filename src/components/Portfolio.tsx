@@ -5,14 +5,20 @@ import { Cloud, Database, ShieldCheck, Lock, Server, Globe, ArrowRight, CheckCir
 
 const projects = [
     {
-        category: "Cloud Infrastructure Migration",
+        category: "Cloud Migration",
         icon: <Cloud size={32} />,
-        title: "Migración Estratégica de Infraestructura Física a la Nube (AWS)",
-        description: "Este proyecto resalta mi capacidad técnica para mover cargas de trabajo críticas entre entornos radicalmente distintos.",
-        challenge: "Migrar una arquitectura de servidores físicos y máquinas virtuales desde centros de datos locales hacia una infraestructura escalable y resiliente en la nube.",
-        impact: "Eliminación de la dependencia de hardware físico (On-Premise), mejora en la alta disponibilidad y reducción de costos operativos.",
+        title: "Migración de Infraestructura a Cloud (AWS)",
+        description: "Migración de servicios críticos y correo corporativo hacia AWS para soportar operaciones internacionales.",
+        challenge: "Migración de servicios críticos y correo corporativo hacia AWS para soportar operaciones internacionales.",
+        accionesClave: [
+            "Diseño de arquitectura cloud escalable",
+            "Migración de máquinas virtuales y servicios",
+            "Configuración de redes y seguridad",
+            "Optimización de disponibilidad"
+        ],
+        impact: "Infraestructura más resiliente y preparada para crecimiento internacional.",
         solution: "Configuración de instancias en AWS, gestión de VMware vCenter para la exportación de servidores y aseguramiento de la integridad de los datos durante la transición.",
-        tags: ["AWS", "VMware", "Cloud Migration", "Infrastructure"],
+        tags: ["AWS", "VMware", "Linux", "Networking"],
         featured: true,
         detailedPhases: [
             {
@@ -49,7 +55,7 @@ const projects = [
         impact: "Estandarización de la comunicación interna, simplificación de la administración de usuarios y mejora del 100% en la colaboración inter-empresarial.",
         solution: "Migración masiva de correos, calendarios y archivos desde Microsoft Office 365 hacia un único tenant de Google Workspace, integrando políticas de seguridad centralizadas.",
         tags: ["Google Workspace", "Migration", "Identity Management", "Collaboration"],
-        featured: true,
+        featured: false,
         detailedPhases: [
             {
                 title: "1. Auditoría de Tenants y Preparación",
@@ -104,15 +110,21 @@ const projects = [
         architectureDiagram: <DatabaseArchitectureDiagram />
     },
     {
-        category: "Continuidad del Negocio",
+        category: "Continuidad Operativa",
         icon: <Server size={32} />,
-        title: "Continuidad del Negocio y Virtualización Avanzada",
-        description: "Implementación de planes de Disaster Recovery y alta disponibilidad mediante virtualización.",
-        challenge: "Eliminar puntos únicos de fallo en la infraestructura de servidores físicos y virtuales.",
-        impact: "Garantía de recuperación inmediata de servicios ante fallos críticos de hardware o software.",
+        title: "Implementación de Disaster Recovery",
+        description: "Necesidad de fortalecer la continuidad del negocio ante posibles fallos.",
+        challenge: "Necesidad de fortalecer la continuidad del negocio ante posibles fallos.",
+        accionesClave: [
+            "Diseño de estrategia de backup y recuperación",
+            "Implementación con Veeam Backup & Replication",
+            "Pruebas de restauración y validación",
+            "Documentación de procedimientos"
+        ],
+        impact: "Entornos virtuales protegidos y reducción del riesgo operativo.",
         solution: "Despliegue de clusters de virtualización y sistemas de respaldo inmutable.",
-        tags: ["Veeam Backup", "VMware vCenter", "Hyper-V"],
-        featured: false,
+        tags: ["Veeam", "VMware", "Storage", "Backup"],
+        featured: true,
         detailedPhases: [
             {
                 title: "1. Arquitectura de Virtualización",
@@ -133,13 +145,19 @@ const projects = [
     {
         category: "Ciberseguridad",
         icon: <Lock size={32} />,
-        title: "Seguridad Perimetral y Gestión de Identidades (IAM)",
-        description: "Despliegue de soluciones de acceso seguro y control de identidades para entornos corporativos remotos.",
-        challenge: "Asegurar la red interna contra amenazas externas manteniendo la facilidad de acceso para el personal.",
-        impact: "Fortalecimiento de la seguridad de la red y cumplimiento de normativas de acceso seguro a la información.",
+        title: "Modelo de Seguridad Zero Trust",
+        description: "Fortalecer el control de accesos y la seguridad perimetral.",
+        challenge: "Fortalecer el control de accesos y la seguridad perimetral.",
+        accionesClave: [
+            "Implementación de Okta y SSO",
+            "Integración con AppGate",
+            "Políticas de acceso seguro",
+            "Endurecimiento de la infraestructura"
+        ],
+        impact: "Mayor control de identidades y mejora en la postura de seguridad.",
         solution: "Implementación de políticas Zero Trust y autenticación multifactor (MFA).",
-        tags: ["Okta", "AppGate", "Fortigate", "Mosyle"],
-        featured: false,
+        tags: ["Okta", "AppGate", "Fortigate", "IAM"],
+        featured: true,
         detailedPhases: [
             {
                 title: "1. Implementación de Zero Trust",
@@ -265,12 +283,12 @@ export default function Portfolio() {
         <section id="portfolio" className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-sm font-bold tracking-widest text-[#00b4d9] uppercase mb-3">Portafolio Estratégico</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
-                        Casos de Éxito Destacados
+                    <h2 className="text-sm font-bold tracking-widest text-[#00b4d9] uppercase mb-3 text-[10px] sm:text-sm">Proyectos & Casos de Éxito</h2>
+                    <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+                        Proyectos & Casos de Éxito
                     </h3>
-                    <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                        Proyectos de alto impacto en infraestructura, seguridad y modernización tecnológica.
+                    <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-lg">
+                        Implementaciones reales de infraestructura, cloud y modernización tecnológica orientadas a resultados empresariales.
                     </p>
                 </div>
 
@@ -284,7 +302,7 @@ export default function Portfolio() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}
-                                className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-2 border-[#00b4d9]/30 flex flex-col md:flex-row gap-8 relative overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                                className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-2 border-[#00b4d9]/30 flex flex-col md:flex-row gap-8 relative overflow-hidden group hover-premium-card"
                             >
                                 <div className="absolute top-0 right-0 bg-[#00b4d9] text-white text-xs font-bold px-4 py-2 rounded-bl-xl uppercase tracking-wider z-10">
                                     Proyecto Estrella
@@ -301,30 +319,26 @@ export default function Portfolio() {
 
                                 <div className="flex-grow">
                                     <h4 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">{project.title}</h4>
-                                    <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                                        {project.description}
-                                    </p>
 
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 bg-slate-50 p-6 rounded-xl border border-slate-100">
+                                    <div className="flex flex-col gap-4 mb-6 bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-100">
                                         <div>
-                                            <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                                                <div className="w-2 h-2 bg-red-400 rounded-full"></div> El Reto
-                                            </h5>
-                                            <p className="text-sm text-slate-600">{project.challenge}</p>
+                                            <h5 className="font-bold text-slate-900 mb-1">Contexto:</h5>
+                                            <p className="text-sm text-slate-600 leading-relaxed">{project.challenge}</p>
                                         </div>
-                                        {project.solution && (
-                                            <div>
-                                                <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                                                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div> La Solución
-                                                </h5>
-                                                <p className="text-sm text-slate-600">{project.solution}</p>
-                                            </div>
-                                        )}
                                         <div>
-                                            <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                                                <div className="w-2 h-2 bg-emerald-400 rounded-full"></div> El Impacto
-                                            </h5>
-                                            <p className="text-sm text-slate-600">{project.impact}</p>
+                                            <h5 className="font-bold text-slate-900 mb-2">Acciones clave:</h5>
+                                            <ul className="text-sm text-slate-600 space-y-2">
+                                                {project.accionesClave?.map((accion, i) => (
+                                                    <li key={i} className="flex gap-2 items-start">
+                                                        <span className="text-[#00b4d9] font-bold mt-0.5">•</span>
+                                                        <span>{accion}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5 className="font-bold text-slate-900 mb-1">Resultado:</h5>
+                                            <p className="text-sm text-slate-600 leading-relaxed">{project.impact}</p>
                                         </div>
                                     </div>
 
@@ -338,7 +352,7 @@ export default function Portfolio() {
 
                                     <button
                                         onClick={() => setSelectedProject(project)}
-                                        className="inline-flex items-center gap-2 bg-[#00b4d9] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#009ac0] transition-colors shadow-md hover:shadow-lg cursor-pointer relative z-10"
+                                        className="inline-flex items-center gap-2 bg-[#00b4d9] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#009ac0] cta-glow-premium cursor-pointer relative z-10"
                                     >
                                         Ver Arquitectura <ArrowRight size={18} />
                                     </button>
@@ -357,7 +371,7 @@ export default function Portfolio() {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
                                 whileHover={{ y: -5 }}
-                                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full group"
+                                className="bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col h-full group hover-premium-card"
                             >
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="w-12 h-12 bg-slate-50 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-[#00b4d9] group-hover:text-white transition-colors">
@@ -396,6 +410,29 @@ export default function Portfolio() {
                         ))}
                     </div>
                 </div>
+
+                {/* Bottom CTA Block */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-20 text-center bg-white p-10 md:p-14 rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] border border-slate-100 max-w-4xl mx-auto relative overflow-hidden group hover-premium-card"
+                >
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#00b4d9]/5 via-transparent to-[#005c8a]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                    <h4 className="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 mb-6 relative z-10 leading-tight">
+                        ¿Necesitas modernizar tu infraestructura o escalar tu plataforma? <br className="hidden md:block" />
+                        <span className="text-[#00b4d9]">Estoy listo para ayudarte.</span>
+                    </h4>
+
+                    <a
+                        href="#contact"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-[#00b4d9] text-white font-bold rounded-xl hover:bg-[#009ac0] cta-glow-premium transition-all relative z-10 text-sm md:text-base tracking-wide"
+                    >
+                        👉 Hablemos de tu proyecto
+                    </a>
+                </motion.div>
             </div>
 
             <ProjectDetailsModal

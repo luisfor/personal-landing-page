@@ -39,7 +39,7 @@ export default function Contact() {
                         transition={{ duration: 0.5 }}
                         className="space-y-8"
                     >
-                        <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#00b4d9]/30 transition-colors">
+                        <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover-premium-card transition-colors">
                             <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                                 <Mail size={24} />
                             </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#00b4d9]/30 transition-colors">
+                        <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover-premium-card transition-colors">
                             <div className="w-12 h-12 bg-[#0077b5]/10 text-[#0077b5] rounded-xl flex items-center justify-center flex-shrink-0">
                                 <Linkedin size={24} />
                             </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#00b4d9]/30 transition-colors">
+                        <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover-premium-card transition-colors">
                             <div className="w-12 h-12 bg-slate-200 text-slate-600 rounded-xl flex items-center justify-center flex-shrink-0">
                                 <MapPin size={24} />
                             </div>
@@ -177,7 +177,7 @@ export default function Contact() {
                                 <button
                                     type="submit"
                                     disabled={formState === "submitting"}
-                                    className="w-full bg-[#00b4d9] text-white font-bold py-4 rounded-xl hover:bg-[#009ac0] transition-colors shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    className="w-full bg-[#00b4d9] text-white font-bold py-4 rounded-xl hover:bg-[#009ac0] cta-glow-premium disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                 >
                                     {formState === "submitting" ? (
                                         "Enviando..."

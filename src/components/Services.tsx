@@ -1,64 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Server, ShieldCheck, Lock, Laptop, Database, ShoppingBag, Users, Fingerprint } from "lucide-react";
+import { Cloud, Server, ShieldCheck, Settings, Activity, Layers } from "lucide-react";
 
 const services = [
     {
-        icon: <Database size={32} />,
-        title: "Administración de Bases de Datos",
-        description: "Especialista en administración, optimización y alta disponibilidad de bases de datos SQL Server.",
-        extra: "Certificado MCSA SQL Server y Titulado SENA. Experiencia en tuning, migración y seguridad de datos críticos.",
+        icon: <Server size={32} />,
+        title: "Administración de Infraestructura",
+        description: "Diseño, implementación y optimización de infraestructuras on-premise y cloud, garantizando alta disponibilidad, rendimiento y estabilidad operativa.",
+        highlight: false,
+    },
+    {
+        icon: <Settings size={32} />,
+        title: "Automatización & DevOps",
+        description: "Automatizo despliegues, pipelines y procesos operativos para reducir errores manuales, acelerar entregas y mejorar la eficiencia del equipo.",
         highlight: true,
-        badge: "Core Expertise"
+        badge: "Eficiencia"
     },
     {
         icon: <Cloud size={32} />,
-        title: "Infraestructura Cloud",
-        description: "Diseño, implementación y gestión de entornos en la nube, optimizando recursos en AWS, Azure y Google Workspace.",
-        extra: "Garantizo una infraestructura escalable y siempre disponible para la continuidad del negocio."
+        title: "Soluciones en la Nube (AWS)",
+        description: "Implementación y administración de entornos en AWS con enfoque en escalabilidad, seguridad y optimización de costos.",
+        highlight: false,
     },
     {
-        icon: <Server size={32} />,
-        title: "Virtualización y Servidores",
-        description: "Administración experta de servidores físicos y virtuales utilizando VMware, vCenter e Hyper-V.",
-        extra: "Gestión avanzada de sistemas operativos Linux (Red Hat, CentOS, Oracle Linux) y Windows Server."
+        icon: <Layers size={32} />,
+        title: "Virtualización & Servidores",
+        description: "Gestión de plataformas virtualizadas con VMware, optimizando recursos y asegurando continuidad del negocio.",
+        highlight: false,
     },
     {
         icon: <ShieldCheck size={32} />,
-        title: "Respaldo y Resiliencia",
-        description: "Configuración de estrategias de respaldo y recuperación ante desastres mediante Veeam Backup & Replication.",
-        extra: "Protección total de datos críticos y minimización del tiempo de inactividad ante fallos."
+        title: "Seguridad & Hardening",
+        description: "Fortalecimiento de servidores y servicios para reducir vulnerabilidades y cumplir buenas prácticas de seguridad.",
+        highlight: false,
     },
     {
-        icon: <Lock size={32} />,
-        title: "Seguridad y Gestión IAM",
-        description: "Implementación de soluciones de seguridad perimetral y gestión de identidades con Okta, AppGate y Fortigate.",
-        extra: "Configuración de switches, AP y proyectos de conectividad como DirectConnect."
-    },
-    {
-        icon: <Laptop size={32} />,
-        title: "Desarrollo Web & IA",
-        description: "Diseño de páginas web, aplicaciones con IA y gestión experta de CMS como WordPress.",
-        extra: "Administración integral de Hosting, dominios y despliegue de soluciones digitales."
-    },
-    {
-        icon: <ShoppingBag size={32} />,
-        title: "Gestión de Activos y Compras TI",
-        description: "Gestión del ciclo de vida de activos tecnológicos, desde la adquisición de hardware hasta el control de inventario.",
-        extra: "Experiencia en compras de equipos (MacBook, servidores), asegurando la mejor relación costo-beneficio."
-    },
-    {
-        icon: <Users size={32} />,
-        title: "Gestión de Proveedores",
-        description: "Gestión estratégica y negociación con proveedores de servicios tecnológicos y suministros.",
-        extra: "Administración de contratos y SLAs con terceros para garantizar la calidad de los servicios IT."
-    },
-    {
-        icon: <Fingerprint size={32} />,
-        title: "Seguridad Física e Infraestructura",
-        description: "Implementación y administración de sistemas de seguridad física y tecnología para oficinas.",
-        extra: "Gestión de circuitos cerrados (CCTV), controles de acceso biométricos y conectividad segura."
+        icon: <Activity size={32} />,
+        title: "Monitoreo & Alta Disponibilidad",
+        description: "Implementación de sistemas de monitoreo proactivo y arquitecturas resilientes para minimizar caídas y tiempos de respuesta.",
+        highlight: false,
     },
 ];
 
@@ -66,10 +47,10 @@ export default function Services() {
     return (
         <section id="services" className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-sm font-bold tracking-widest text-slate-500 uppercase mb-3">Mis Servicios</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
-                        Soluciones Profesionales
+                <div className="text-center mb-16 px-4">
+                    <h2 className="text-sm font-bold tracking-widest text-[#00b4d9] uppercase mb-4">Soluciones Profesionales</h2>
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 max-w-4xl mx-auto leading-snug md:leading-tight">
+                        Ayudo a empresas a modernizar, asegurar y escalar su infraestructura tecnológica con soluciones DevOps y Cloud de nivel empresarial.
                     </h3>
                 </div>
 
@@ -82,9 +63,9 @@ export default function Services() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             whileHover={{ y: -5 }}
-                            className={`relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border group flex flex-col h-full ${service.highlight
-                                ? "border-[#00b4d9] shadow-md ring-1 ring-[#00b4d9]/20"
-                                : "border-slate-100"
+                            className={`relative bg-white p-8 rounded-2xl border group flex flex-col h-full hover-premium-card hover:border-[#00b4d9]/40 transition-[border-color,box-shadow,transform] duration-300 ${service.highlight
+                                ? "border-[#00b4d9]/50 shadow-[0_8px_30px_rgba(0,180,217,0.12)] ring-1 ring-[#00b4d9]/20"
+                                : "border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
                                 }`}
                         >
                             {service.highlight && (
@@ -109,17 +90,35 @@ export default function Services() {
                                 )}
                             </div>
                             <h4 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h4>
-                            <p className="text-slate-600 leading-relaxed text-sm mb-4">
+                            <p className="text-slate-600 leading-relaxed text-[15px]">
                                 {service.description}
                             </p>
-                            <div className="mt-auto pt-4 border-t border-slate-100">
-                                <p className="text-xs font-semibold text-[#00b4d9] italic">
-                                    {service.extra}
-                                </p>
-                            </div>
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Bottom CTA Block */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-24 text-center bg-white p-10 md:p-14 rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] border border-slate-100 max-w-4xl mx-auto relative overflow-hidden group hover-premium-card"
+                >
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#00b4d9]/5 via-transparent to-[#005c8a]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                    <h4 className="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 mb-6 relative z-10 leading-tight">
+                        ¿Tu infraestructura está lista para escalar sin riesgos? <br className="hidden md:block" />
+                        <span className="text-[#00b4d9]">Te ayudo a llevarla a nivel empresarial.</span>
+                    </h4>
+
+                    <a
+                        href="#contact"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-[#00b4d9] text-white font-bold rounded-xl hover:bg-[#009ac0] cta-glow-premium transition-all relative z-10 text-sm md:text-base tracking-wide"
+                    >
+                        👉 Hablemos de tu proyecto
+                    </a>
+                </motion.div>
             </div>
         </section>
     );
