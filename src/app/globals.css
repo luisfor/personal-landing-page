@@ -173,6 +173,27 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans),
+    Arial,
+    Helvetica,
+    sans-serif;
   antialiased: true;
+}
+
+/* WhatsApp Nivel Dios - Micro Pulse */
+@keyframes wp-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  10%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-wp-ping {
+  animation: wp-ping 7s cubic-bezier(0, 0, 0.2, 1) infinite;
 }

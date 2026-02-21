@@ -25,8 +25,18 @@ export default function Contact() {
                     <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
                         ¿Listo para modernizar tu infraestructura?
                     </h3>
-                    <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                        Estoy disponible para consultorías, proyectos de migración cloud y estrategias de ciberseguridad.
+
+                    {/* Urgencia Suave */}
+                    <div className="inline-flex items-center gap-2 mt-4 px-4 py-1.5 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
+                        </span>
+                        Respuesta en menos de 24 horas
+                    </div>
+
+                    <p className="mt-6 text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                        Ayudo a empresas a migrar, asegurar y escalar su infraestructura cloud con enfoque en alta disponibilidad y seguridad.
                     </p>
                 </div>
 
@@ -45,7 +55,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4 className="text-lg font-bold text-slate-900">Correo Electrónico</h4>
-                                <p className="text-slate-600 mb-2">Para consultas detalladas y propuestas.</p>
+                                <p className="text-slate-600 mb-2">Para propuestas técnicas y consultas empresariales.</p>
                                 <a href="mailto:lcanedo12@gmail.com" className="text-[#00b4d9] font-semibold hover:underline text-lg">
                                     lcanedo12@gmail.com
                                 </a>
@@ -58,7 +68,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4 className="text-lg font-bold text-slate-900">LinkedIn</h4>
-                                <p className="text-slate-600 mb-2">Mi perfil profesional y red de contactos.</p>
+                                <p className="text-slate-600 mb-2">Conoce mi trayectoria profesional y validaciones técnicas.</p>
                                 <a href="https://www.linkedin.com/in/luis-eduardo-canedo/" target="_blank" rel="noopener noreferrer" className="text-[#00b4d9] font-semibold hover:underline text-lg">
                                     Conectar en LinkedIn
                                 </a>
@@ -71,9 +81,9 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4 className="text-lg font-bold text-slate-900">Ubicación</h4>
-                                <p className="text-slate-600 mb-2">Base de operaciones.</p>
+                                <p className="text-slate-600 mb-2">Atención remota para LATAM y USA.</p>
                                 <span className="text-slate-800 font-medium text-lg">
-                                    Cartagena, Colombia (Disponible Remoto)
+                                    Base en Cartagena, Colombia
                                 </span>
                             </div>
                         </div>
@@ -87,9 +97,22 @@ export default function Contact() {
                         transition={{ duration: 0.5 }}
                         className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100"
                     >
-                        <h4 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <h4 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                             <MessageSquare className="text-[#00b4d9]" /> Envíame un mensaje
                         </h4>
+
+                        {/* Trust Bullets (Nivel Dios) */}
+                        <ul className="mb-6 space-y-1.5 text-sm text-slate-600 font-medium border-b border-slate-100 pb-6">
+                            <li className="flex items-center gap-2">
+                                <span className="text-[#00b4d9]">✔</span> +15 años en infraestructura crítica
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-[#00b4d9]">✔</span> Experiencia con empresas B2B e Internacionales
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-[#00b4d9]">✔</span> Enfoque en alta disponibilidad y resiliencia
+                            </li>
+                        </ul>
 
                         {formState === "success" ? (
                             <div className="h-64 flex flex-col items-center justify-center text-center">
@@ -171,7 +194,7 @@ export default function Contact() {
                                         rows={4}
                                         required
                                         className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#00b4d9] focus:ring-2 focus:ring-[#00b4d9]/20 outline-none transition-all resize-none"
-                                        placeholder="¿En qué puedo ayudarte?"
+                                        placeholder="Cuéntame brevemente tu necesidad (migración cloud, mejora de infraestructura, seguridad, etc.)"
                                     ></textarea>
                                 </div>
                                 <button
@@ -185,13 +208,26 @@ export default function Contact() {
                                         <>Enviar Mensaje <Send size={18} /></>
                                     )}
                                 </button>
+
+                                {/* Confianza bajo el botón */}
+                                <p className="text-center text-xs text-slate-400 mt-4 flex items-center justify-center gap-1.5">
+                                    <span>🔒</span> Tu información será tratada de forma confidencial.
+                                </p>
                             </form>
                         )}
                     </motion.div>
                 </div>
 
-                {/* Google Map Section */}
-                <div className="mt-20">
+                {/* Google Map Section (Nivel Dios Positioning) */}
+                <div className="mt-24 max-w-4xl mx-auto">
+                    <div className="text-center mb-10">
+                        <h4 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                            🌎 Atención remota para LATAM y Estados Unidos
+                        </h4>
+                        <p className="text-slate-600 text-lg">
+                            Opero desde Cartagena, Colombia, brindando soporte y consultoría remota a empresas internacionales.
+                        </p>
+                    </div>
                     <GoogleMap />
                 </div>
             </div>

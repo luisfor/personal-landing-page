@@ -22,8 +22,11 @@ El objetivo es posicionar mi perfil no solo como un ingeniero técnico, sino com
 *   **⚡ Performance Extrema**: Construido con Next.js 15 (App Router) y React.
 *   **🎨 Diseño Enterprise Premium**: UI sofisticada con micro-interacciones, sombras avanzadas, glassmorphism y sistema de movimiento fluido (Framer Motion).
 *   **✨ Hover Intelligence**: Tarjetas y componentes interactivos que reaccionan con elevaciones suaves y glows sutiles para una percepción *high-end*.
+*   **📱 Conversión B2B Avanzada**: 
+    *   Botón Flotante de WhatsApp "Nivel Dios" (Micro-pulse autónomo, Detección de OS, Smart Tooltip con *delay*).
+    *   Arquitectura de Footer con micro-CTA direccional.
 *   **🧩 Motion Backgrounds**: Grillas tecnológicas animadas y degradados en movimiento orientados a perfiles Tech/Cloud.
-*   **📈 Posicionamiento Estratégico**: Copywriting enfocado en "Casos de Éxito", métricas de impacto empresarial y metodologías como Zero Trust y Disaster Recovery.
+*   **📈 Posicionamiento Estratégico**: Copywriting enfocado en "Casos de Éxito", atención remota global, métricas de impacto empresarial y metodologías como Zero Trust y Disaster Recovery.
 
 ---
 

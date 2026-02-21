@@ -9,7 +9,7 @@ export default function GoogleMap() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-xl border border-slate-200 relative bg-slate-100"
+            className="w-full h-[300px] md:h-[380px] rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-slate-200 relative bg-slate-100"
         >
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.3662580556205!2d-75.5118782!3d10.3944594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625eb92de5107%3A0x193b39404033c0bb!2sD-SoftWare!5e0!3m2!1sen!2sco!4v1707160000000!5m2!1sen!2sco"
